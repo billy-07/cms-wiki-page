@@ -27,6 +27,11 @@ def add():
         return redirect(url_for('index'))
     return render_template('add.html')
 
+@app.route('/edit/<int:content>', methods=['POST'])
+def edit_task(task_id):
+    new_text = request.form['updated_content']
+    return #not finished
+
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
