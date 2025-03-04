@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Content Management System</title>
-  </head>
+{% extends "layout.html" %} {% block content %}
+<html>
+  <head> </head>
   <body>
     <h1>Content List</h1>
     <ul>
@@ -11,6 +9,8 @@
       <li>{{ content.title }}</li>
       {% endfor %}
     </ul>
-    <a href="{{ url_for('add') }}">Add New Content</a>
+    <a href="{{ url_for('edit') }}">Add New Content</a>
   </body>
 </html>
+{% endblock %}
+
